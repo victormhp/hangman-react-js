@@ -1,2 +1,3 @@
 # hangman-react-js
-Hangman game made with React JS
+
+Hangman game made with React JS (IN PROCESS)
