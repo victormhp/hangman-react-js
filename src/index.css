@@ -21,7 +21,7 @@ body,
 
 @layer base {
 	@font-face {
-		font-family: 'Press';
+		font-family: 'Press Start';
 		font-weight: 400;
 		src: 
 			url('../public/fonts/press-start.woff') format('woff'), 

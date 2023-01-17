@@ -22,7 +22,7 @@ function Keyboard({
 							<button
 								className={`border border-neutral-900 py-2 px-3 rounded font-medium text-keyboard uppercase cursor-pointer 
 									${isInactive && 'opacity-30'}
-									${isActive && 'bg-cyan-500'}
+									${isActive && 'bg-emerald-400'}
 									${!isInactive && !isActive && 'hover:bg-neutral-300 duration-200'}`}
 								onClick={() => addGuessedLetter(key)}
 								disabled={isInactive || isActive || disabled}

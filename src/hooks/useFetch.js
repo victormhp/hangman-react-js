@@ -5,7 +5,9 @@ const useFetch = () => {
 
 	useEffect(() => {
 		const options = {
-			type: 'verb',
+			parameters: {
+				type: 'verb',
+			},
 			headers: {
 				'X-Api-Key': 'UFI1qQIcCFsgWBXWT46zPysaT71FSATN6N0rWvBW',
 			},
