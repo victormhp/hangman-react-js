@@ -1,10 +1,15 @@
 import { Gallow, Head, LArm, RArm, LLeg, RLeg } from '../assets';
 
-function Hangman() {
-	const images = [Gallow, Head, LArm, RArm, LLeg, RLeg];
+function Hangman({ attempts }) {
+	const IMAGES = [Gallow, Head, LArm, RArm, LLeg, RLeg];
+
 	return (
 		<div>
-			<img src={RLeg} alt='Hangman' className='w-full' />
+			<img
+				src={attempts > 0 ? IMAGES[attempts] : IMAGES[0]}
+				alt='Hangman'
+				className='w-48 sm:w-60 md:w-80'
+			/>
 		</div>
 	);
 }
