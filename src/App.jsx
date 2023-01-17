@@ -9,8 +9,8 @@ function App() {
 	const incorrectLetters = guessedLetters.filter(
 		letter => !wordToGuess.includes(letter)
 	);
-	console.log(wordToGuess);
-	const isLoser = incorrectLetters.length >= 5;
+
+	const isLoser = incorrectLetters.length >= 6;
 	const isWinner = wordToGuess
 		.split('')
 		.every(letter => guessedLetters.includes(letter));
@@ -44,20 +44,25 @@ function App() {
 		<>
 			<Header />
 			{wordToGuess && (
-				<main className='max-w-5xl flex flex-col gap-4 mx-auto my-10 items-center'>
+				<main className='max-w-5xl flex flex-col gap-8 mx-auto my-10 items-center'>
 					<Hangman attempts={incorrectLetters.length} />
-					{(isLoser || isWinner) && <Outcome isWinner={isWinner} />}
 					<Word
 						answer={isLoser}
 						guessedLetters={guessedLetters}
 						wordToGuess={wordToGuess}
 					/>
-					<Keyboard
-						disabled={isLoser || isWinner}
-						activeLetters={guessedLetters.filter(l => wordToGuess.includes(l))}
-						inactiveLetters={incorrectLetters}
-						addGuessedLetter={addGuessedLetter}
-					/>
+					{isLoser || isWinner ? (
+						<Outcome isWinner={isWinner} />
+					) : (
+						<Keyboard
+							disabled={isLoser || isWinner}
+							activeLetters={guessedLetters.filter(letter =>
+								wordToGuess.includes(letter)
+							)}
+							inactiveLetters={incorrectLetters}
+							addGuessedLetter={addGuessedLetter}
+						/>
+					)}
 				</main>
 			)}
 			<Footer />

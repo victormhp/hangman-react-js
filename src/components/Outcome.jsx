@@ -5,7 +5,7 @@ function Outcome({ isWinner }) {
 
 	return (
 		<button
-			className={`text-neutral-100 font-semibold uppercase px-8 py-2 rounded ${
+			className={`text-neutral-100 text-keyboard font-semibold uppercase my-10 px-8 py-2 rounded-lg ${
 				isWinner
 					? 'bg-emerald-500 hover:bg-emerald-600 duration-200'
 					: 'bg-red-500 hover:bg-red-600 duration-200'
