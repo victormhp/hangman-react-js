@@ -1,7 +1,15 @@
-import { Gallow, Head, LArm, RArm, LLeg, RLeg } from '../assets';
+import {
+	Stage0,
+	Stage1,
+	Stage2,
+	Stage3,
+	Stage4,
+	Stage5,
+	Stage6,
+} from '../assets';
 
 function Hangman({ attempts }) {
-	const IMAGES = [Gallow, Head, LArm, RArm, LLeg, RLeg];
+	const IMAGES = [Stage0, Stage1, Stage2, Stage3, Stage4, Stage5, Stage6];
 
 	return (
 		<div>
