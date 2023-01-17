@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const useFetch = () => {
 	const [data, setData] = useState('');
 
-	const request = () => {
+	useEffect(() => {
 		const options = {
 			type: 'verb',
 			headers: {
@@ -15,9 +15,9 @@ const useFetch = () => {
 			.then(response => response.json())
 			.then(response => setData(response.word))
 			.catch(error => console.log(error));
-	};
+	}, []);
 
-	return { request, data };
+	return data;
 };
 
 export default useFetch;
