@@ -7,9 +7,10 @@ module.exports = {
 				title: 'clamp(1.5rem, 1.3333rem + 0.7407vw, 2.25rem)',
 				word: 'clamp(3rem, 2.3333rem + 2.9630vw, 6rem)',
 				keyboard: 'clamp(0.875rem, 0.7361rem + 0.6173vw, 1.5rem);',
+				footer: 'clamp(0.75rem, 0.6944rem + 0.2469vw, 1rem)',
 			},
 			fontFamily: {
-				press: 'Press',
+				press: 'Press Start',
 			},
 		},
 	},
