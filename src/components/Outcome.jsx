@@ -1,6 +1,11 @@
-function Outcome({ isWinner }) {
+import useFetch from '../hooks/useFetch';
+
+function Outcome({ isWinner, setWordToGuess, resetGuessedLetters }) {
+	const data = useFetch();
+
 	const handleClick = () => {
-		window.location.reload();
+		resetGuessedLetters([]);
+		setWordToGuess(data);
 	};
 
 	return (

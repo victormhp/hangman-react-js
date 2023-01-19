@@ -3,20 +3,17 @@ import { useState, useEffect } from 'react';
 const useFetch = () => {
 	const [data, setData] = useState('');
 
-	useEffect(() => {
-		const options = {
-			parameters: {
-				type: 'verb',
-			},
-			headers: {
-				'X-Api-Key': 'UFI1qQIcCFsgWBXWT46zPysaT71FSATN6N0rWvBW',
-			},
-		};
+	const request = () => {
+		const id = Math.floor(Math.random() * 150 + 1);
 
-		fetch('https://api.api-ninjas.com/v1/randomword', options)
+		fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
 			.then(response => response.json())
-			.then(response => setData(response.word))
+			.then(data => setData(data.name))
 			.catch(error => console.log(error));
+	};
+
+	useEffect(() => {
+		request();
 	}, []);
 
 	return data;

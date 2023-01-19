@@ -1,20 +1,12 @@
-import {
-	Stage0,
-	Stage1,
-	Stage2,
-	Stage3,
-	Stage4,
-	Stage5,
-	Stage6,
-} from '../assets';
+import { Stage0, Stage1, Stage2, Stage3, Stage4, Stage5, Stage6 } from '../assets';
 
-function Hangman({ attempts }) {
+function Hangman({ incorrect }) {
 	const IMAGES = [Stage0, Stage1, Stage2, Stage3, Stage4, Stage5, Stage6];
 
 	return (
 		<div>
 			<img
-				src={attempts > 0 ? IMAGES[attempts] : IMAGES[0]}
+				src={incorrect > 0 ? IMAGES[incorrect] : IMAGES[0]}
 				alt='Hangman progress'
 				className='w-60 md:w-80'
 			/>
