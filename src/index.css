@@ -24,7 +24,7 @@ body,
 		font-family: 'Press Start';
 		font-weight: 400;
 		src: 
-			url('../public/fonts/press-start.woff') format('woff'), 
-			url('../public/fonts/press-start.woff2') format('woff2');
+			url('/fonts/press-start.woff') format('woff'), 
+			url('/fonts/press-start.woff2') format('woff2');
 	}
 }
